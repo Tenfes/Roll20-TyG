@@ -1,3 +1,46 @@
+.charsheet {
+	background-color: #fff;
+	min-width: 800px;
+}
+
+input {
+	display: inline-block;
+	width: 165px;
+}
+
+input.sheet-short {
+	width: 17%;
+}
+
+select.sheet-dtype {
+    vertical-align: top;
+    width: 60px;
+}
+
+.sheet-stats input {
+	margin-right: 8%;
+	width: 17%;
+}
+
+p {
+    margin: 5px;
+}
+
+textarea {
+  padding: 6px 10px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 2px;
+  background-color: #f8f8f8;
+  resize: none;
+  display: block;
+  margin: 5px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 table  {  
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -13,20 +56,6 @@ td, th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
-}
-
-col {
-    column-width: 300px;
-    column-gap: 10px;
-}
-
-textarea {
-  padding: 6px 10px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 2px;
-  background-color: #f8f8f8;
-  resize: none;
 }
 
 .sheet-pericias,
