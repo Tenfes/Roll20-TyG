@@ -12,28 +12,29 @@
 <!-- CARACTERÍSTICAS -->
 
 <div class='sheet-pericias'>
-    <span>
+    <br></br>
         
     <!-- NOMBRE, CLASE, FAMA Y DG -->
     
-    <table id=style1>
-    <tr>
-        <th>NOMBRE </th>
-        <td><input type="text" name="attr_character_name" /></td>
-        <th>Clase </th>
-        <td><input type="text" style=style=width:100px;height:28px name=attr_ClasePJ ></td>
-        <td><button type='roll' value='&{template:default} {{name=@{character_name} tira sus pg después del Entretiempo}} {{Resultado=[[@{DG}]]}}' name='tirada_DG'></button>Dados de Golpe</td>
-        <td><input type="text" name="attr_DG" style=width:70px;height:28px ></td>
-    </tr>
-    <tr>
-        <th>Gloria </th>
-        <td><input type="text" name="attr_ptsGloria" /></td>
-        <th>Fama </th>
-        <td><input type="text" style=style=width:100px;height:28px name=attr_Fama ></td>
-        <td><button type='roll' value='&{template:default} {{name=@{character_name} se esfuerza en el camino}} {{Resultado=[[1d6+@{modSab}]]}}' name='tarea_camino'></button>Tareas del camino y PM </td>
-        <td><input type="number" name="attr_PM" style=width:70px;height:28px ></td>
-    </tr>
-</table>
+    <div class="3colrow">
+        <div class='col' style="width:30%;">
+            <p><span>NOMBRE </span>
+            <input type="text" name="attr_character_name" /></p>
+            <p style="margin-left:43%"><span>Gloria </span>
+            <input type="text" name="attr_ptsGloria" style="width:80px;height:28px" /></p>
+        </div>
+        <div class='col' style="width:20%">
+            <p style="margin-left:-20%"><span>Clase  </span><input type="text" style=style=width:80px;height:28px name="attr_ClasePJ" /></p>
+            <p style="margin-left:-20%"><span>Fama  </span><input type="text" style="width:80px;height:28px" name="attr_Fama" /></p>
+        </div>
+        <div class='col' style="width:35%">
+            <p style="margin-left:-30%"><button type='roll' value='&{template:default} {{name=@{character_name} tira sus pg después del Entretiempo}} {{Resultado=[[@{DG}]]}}' name='tirada_DG'></button>
+            <span>Dados de Golpe . . . . . . </span> <input type="text" name="attr_DG" style="width:70px;height:28px" /></p>
+            <p style="margin-left:-30%"><button type='roll' value='&{template:default} {{name=@{character_name} se esfuerza en el camino}} {{Resultado=[[1d6+@{modSab}]]}}' name='tarea_camino'></button>
+            <span>Tareas del camino y PM</span> <input type="number" name="attr_PM" style="width:50px;height:28px" /></p>
+        </div>
+    </div>
+    
     <br></br>
 
 <!-- CARACTERÍSTICAS Y PERICIAS -->
@@ -253,28 +254,26 @@
             <p><input type="text" style=style=width:150px;height:28px name="attr_bolsa1">
             <input type="text" style=style=width:150px;height:28px name="attr_bolsa2"></p>
             <p><h4>Tesoro</h4></p>
-            <table class=style2>
-                <tr>
-                    <td><input type="text" style=style=width:150px;height:28px name="attr_tesoro1"></td>
-                    <td><input type="text" style=style=width:150px;height:28px name="attr_tesoro2"></td>
-                </tr>
-                <tr>
-                    <td><input type="text" style=style=width:150px;height:28px name="attr_tesoro3"></td>
-                    <td><input type="text" style=style=width:150px;height:28px name="attr_tesoro4"></td>
-                </tr>
-                <tr>
-                    <td><input type="text" style=style=width:150px;height:28px name="attr_tesoro5"></td>
-                    <td><input type="text" style=style=width:150px;height:28px name="attr_tesoro6"></td>
-                </tr>
-                <tr>
-                    <td><input type="text" style=style=width:150px;height:28px name="attr_tesoro7"></td>
-                    <td><input type="text" style=style=width:150px;height:28px name="attr_tesoro8"></td>
-                </tr>
-                <tr>
-                    <td><input type="text" style=style=width:150px;height:28px name="attr_tesoro9"></td>
-                    <td><input type="text" style=style=width:150px;height:28px name="attr_tesoro10"></td>
-                </tr>
-            </table>
+                <p>
+                    <input type="text" style=style=width:150px;height:28px name="attr_tesoro1">
+                    <input type="text" style=style=width:150px;height:28px name="attr_tesoro2">
+                </p>
+                <p>
+                    <input type="text" style=style=width:150px;height:28px name="attr_tesoro3">
+                    <input type="text" style=style=width:150px;height:28px name="attr_tesoro4">
+                </p>
+                <p>
+                    <td><input type="text" style=style=width:150px;height:28px name="attr_tesoro5">
+                    <td><input type="text" style=style=width:150px;height:28px name="attr_tesoro6">
+                </p>
+                <p>
+                    <input type="text" style=style=width:150px;height:28px name="attr_tesoro7">
+                    <input type="text" style=style=width:150px;height:28px name="attr_tesoro8">
+                </p>
+                <p>
+                    <input type="text" style=style=width:150px;height:28px name="attr_tesoro9">
+                    <input type="text" style=style=width:150px;height:28px name="attr_tesoro10">
+                </p>
             <p><h4>Alijo</h4></p>
             <textarea style=width:300px;height:150px name="attr_alijo">Anota aquí lo que dejes a buen recaudo en tu guarida.</textarea>
         </div>
@@ -285,12 +284,8 @@
             <br></br>
             <h4>Hitos del Personaje</h4>
             <fieldset class="repeating_character-hitos" style="display: none;">
-                <table>
-                    <tr>
-                        <td><input type="text" style="width:150px;height:28px" name="attr_hitos1"></td>
-                        <td><input type="text" style="width:150px;height:28px" name="attr_hitos2"></td>
-                    </tr>
-                </table>
+                        <input type="text" style="width:150px;height:28px;" name="attr_hitos1">
+                        <input type="text" style="width:150px;height:28px;" name="attr_hitos2">
             </fieldset>
             
             <br></br>
@@ -304,16 +299,9 @@
             
             <h4>Talentos de Prestigio y Lealtad</h4>
             <fieldset class="repeating_character-talentos-prestigio" style="display: none;">
-                <table>
-                    <tr>
-                        <td><input type="text" style="width:150px;height:28px" name="attr_talentos-prestigio1"></td>
-                        <td><input type="text" style="width:150px;height:28px" name="attr_talentos-prestigio2"></td>
-                    </tr>
-                    <tr>
-                        <td><textarea style="width:200px;height:52px" name="attr_desc-prestigio1">Descripción</textarea></td>
-                        <td><textarea style="width:200px;height:52px" name="attr_desc-prestigio2">Descripción</textarea></td>
-                    </tr>
-                </table>
+                <p>
+                    <textarea style="width:350px;height:52px;margin-bot:5px" name="attr_desc-prestigio2">Descripción</textarea>
+                </p>
             </fieldset>
         </div>
     </div>
@@ -411,32 +399,34 @@
     <span>
         
     <!-- TIPO, Nº, DG, PG, CA, SALVACIONES Y MORAL -->
+
+    <div class='2colrow' style="width:500px">
         
-    <table class=style2>
-    <tr>
-        <td>Tipo  <input type="text" style=style=width:150px;height:28px name="attr_tipo"></td>
-        <td><button type='roll' value='/w gm @{character_name} tira Reacción, [[@{reacción}+2d6]]' name='tirada_reacción' ></button>Reacción  <input type="text" name="attr_reacción" style=style=width:60px;height:28px /></td>
-    </tr>
-    <tr>
-        <td><button type='roll' value='/w gm Aparecen [[@{numberE}]] @{character_name}' ></button> Número (encuentro)<input type="text" style="width:60px;height:28px" name="attr_numberE"> </td>
-        <td><button type='roll' value='/w gm En su guarida viven [[@{numberG}]] @{character_name}' ></button> Número (guarida)<input type="text" style="width:60px;height:28px" name="attr_numberG"> </td>
-    </tr>
-    <tr>
-        <td><button type='roll' value='/w gm @{character_name} tiene [[@{DG}]] pg'></button>Dados de Golpe  <input type="text" name="attr_DG" style="width:60px;height:28px" ></td>
-        <td><img src=https://www.pinclipart.com/picdir/middle/128-1280265_walking-footprints-cliparts-4-buy-clip-art-transparent.png style="width:30px;height:28px">Velocidad  <input type="number" name="attr_Vel" ></td>
-    </tr>
-    <tr>
-        <td>PG  <input type="number" name="attr_pgTotales" /><span> // </span><input type="number" name="attr_pgActuales" /></td>
-        <td><img src=https://www.pngfind.com/pngs/m/460-4608121_free-png-shield-template-png-png-image-with.png style="width:28px;height:28px">Clase de Armadura  </th> <input type="number" name="attr_CA" ></td>
-    </tr>
-    <tr>
-        <td colspan="2"><button type='roll' value='&{template:default} {{name=@{character_name} se pone a prueba}} {{Resultado=[[1d20]]}}' name='tirada_salvación' ></button>Salvaciones o Pericias <input type="text" style="width:500px;height:28px" name="attr_salvaciones" > </td>
-    </tr>
-    <tr>
-        <td><button type='roll' value='/w gm @{character_name} tira Moral (@{moral}), [[2d6]]' name='tirada_moral' ></button>Moral  <input type="number" name="attr_moral" ></td>
-        <td>Gloria <input type="number" name="attr_gloria" style="width:120px;height:28px" ></td>
-    </tr>
-    </table>
+    <div class='col' style="width:45%">
+        <p><span>Tipo </span><input type="text" style=style=width:150px;height:28px name="attr_tipo"></p>
+        <p><button type='roll' value='/w gm Aparecen [[@{numberE}]] @{character_name}' ></button>
+        <span> Número (encuentro)</span><input type="text" style="width:60px;height:28px" name="attr_numberE"></p>
+        <p><button type='roll' value='/w gm @{character_name} tiene [[@{DG}]] pg'></button>
+        <span>Dados de Golpe </span><input type="text" name="attr_DG" style="width:60px;height:28px" ></p>
+        <p><button type='roll' value='&{template:default} {{name=@{character_name} se pone a prueba}} {{Resultado=[[1d20]]}}' name='tirada_salvación' ></button>
+        <span>Salvaciones </span></p>
+        <p><input type="text" style="width:200px;height:28px" name="attr_salvaciones" ></p>
+        <p><button type='roll' value='/w gm @{character_name} tira Moral (@{moral}), [[2d6]]' name='tirada_moral' ></button>
+        <span>Moral </span><input type="number" name="attr_moral" ></p>
+    </div>
+    <div class='col' style="width:45%">
+        <p><button type='roll' value='/w gm @{character_name} tira Reacción, [[@{reacción}+2d6]]' name='tirada_reacción' ></button>
+        <span>Reacción </span>  <input type="text" name="attr_reacción" style=style=width:60px;height:28px /></p>
+        <p><button type='roll' value='/w gm En su guarida viven [[@{numberG}]] @{character_name}' ></button> 
+        <span>Número (guarida)</span><input type="text" style="width:60px;height:28px" name="attr_numberG"></p>
+        <p><span>PG </span><input type="number" name="attr_pgTotales" />
+        <span> // </span>
+        <input type="number" name="attr_pgActuales" /></p>
+        <p><span>Velocidad </span><input type="number" name="attr_Vel" ></p>
+        <p><span>Clase de Armadura </span><input type="number" name="attr_CA" ></p>
+        <p><span>Gloria </span><input type="number" name="attr_gloria" style="width:120px;height:28px" ></p>
+    </div>
+    </div>
     
     <br></br>
     
@@ -498,7 +488,7 @@
 </table>
 <br></br>
 <h3>Notas adicionales</h3>
-<p><textarea style="width:500px;height:150px;" name="attr_notas-adicionales"></textarea></p>
+<p><textarea style="width:500px;height:150px;" name="attr_notas-adicionales" ></textarea></p>
     </span> 
     
 </div>
