@@ -194,3 +194,5 @@ select.sheet-dtype {
 .sheet-tabstoggle[value="monstruos"] ~ div.sheet-monstruos {
 	display: block;
 }
+
+© 2019 GitHub, Inc.
